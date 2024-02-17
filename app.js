@@ -1,7 +1,7 @@
 /* Created and coded by Amrit Pritam Sangramsingh */
 /* Quiz source: w3schools.com */
 // Add these variables at the beginning of your app.js file
-var totalTimeInSeconds = 300; // Set the total time in seconds (e.g., 5 minutes)
+var totalTimeInSeconds = 30; // Set the total time in seconds (e.g., 5 minutes)
 var timeLeft = totalTimeInSeconds;
 var countdownInterval;
 
@@ -17,8 +17,8 @@ function updateTimer() {
 
     if (timeLeft <= 0) {
         clearInterval(countdownInterval);
-        // Auto-submit the form when time is up
-        document.forms["quizForm"].submit();
+        alert("Time's up! Quiz completed.");
+        // Add any additional logic for the end of the quiz
     } else {
         timeLeft--;
     }
@@ -26,7 +26,6 @@ function updateTimer() {
 
 document.addEventListener("DOMContentLoaded", function() {
     startTimer();
-    // Other initialization code if needed
 });
 
 
