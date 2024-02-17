@@ -1,6 +1,14 @@
 /* Created and coded by Amrit Pritam Sangramsingh */
 /* Quiz source: w3schools.com */
 // Add these variables at the beginning of your app.js file
+var totalTimeInSeconds = 300; // Set the total time in seconds (e.g., 5 minutes)
+var timeLeft = totalTimeInSeconds;
+var countdownInterval;
+
+function startTimer() {
+    countdownInterval = setInterval(updateTimer, 1000);
+}
+
 function updateTimer() {
     var minutes = Math.floor(timeLeft / 60);
     var seconds = timeLeft % 60;
@@ -15,10 +23,12 @@ function updateTimer() {
         timeLeft--;
     }
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     startTimer();
     // Other initialization code if needed
 });
+
 var quiz = {
 "JS": [
 {
