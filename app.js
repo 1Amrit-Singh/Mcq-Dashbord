@@ -1,7 +1,7 @@
 /* Created and coded by Amrit Pritam Sangramsingh */
 /* Quiz source: w3schools.com */
 // Add these variables at the beginning of your app.js file
-var totalTimeInSeconds = 30; // Set the total time in seconds (e.g., 5 minutes)
+var totalTimeInSeconds = 1800; // Set the total time in seconds (e.g., 5 minutes)
 var timeLeft = totalTimeInSeconds;
 var countdownInterval;
 
