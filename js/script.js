@@ -1,7 +1,11 @@
 const quizContainer = document.getElementById('quiz-container');
+const resultContainer = document.getElementById('result-container');
 const questionContainer = document.getElementById('question-container');
 const optionsContainer = document.getElementById('options-container');
-const button = document.querySelector('button');
+const answersContainer = document.getElementById('answers-container');
+const scoreElement = document.getElementById('score');
+const totalQuestionsElement = document.getElementById('total-questions');
+const nextButton = document.querySelector('button');
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -51,16 +55,39 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     } else {
-        endQuiz();
+        showResult();
     }
 }
 
-function endQuiz() {
-    quizContainer.innerHTML = `
-        <h1>Quiz Completed!</h1>
-        <p>Your score: ${score} out of ${questions.length}</p>
-        <button onclick="location.reload()">Restart Quiz</button>
-    `;
+function showResult() {
+    quizContainer.style.display = 'none';
+    resultContainer.style.display = 'block';
+
+    scoreElement.textContent = score;
+    totalQuestionsElement.textContent = questions.length;
+
+    displayAnswers();
+}
+
+function displayAnswers() {
+    answersContainer.innerHTML = '';
+    questions.forEach((question, index) => {
+        const answerDiv = document.createElement('div');
+        answerDiv.classList.add('answer');
+        answerDiv.innerHTML = `<strong>Q${index + 1}:</strong> ${question.question}<br>
+                              <strong>Answer:</strong> ${question.correctAnswer}`;
+        answersContainer.appendChild(answerDiv);
+    });
+}
+
+function restartQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+
+    quizContainer.style.display = 'block';
+    resultContainer.style.display = 'none';
+
+    displayQuestion();
 }
 
 // Initial display
