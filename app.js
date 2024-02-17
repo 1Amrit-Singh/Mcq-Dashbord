@@ -15,7 +15,10 @@ function updateTimer() {
         timeLeft--;
     }
 }
-
+document.addEventListener("DOMContentLoaded", function() {
+    startTimer();
+    // Other initialization code if needed
+});
 var quiz = {
 "JS": [
 {
