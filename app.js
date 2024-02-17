@@ -1,11 +1,10 @@
-/* Created and coded by Abhilash Narayan */
+/* Created and coded by Amrit Pritam Sangramsingh */
 /* Quiz source: w3schools.com */
 // Add these variables at the beginning of your app.js file
 var totalTimeInSeconds = 300; // Set the total time in seconds (e.g., 5 minutes)
 var timeLeft = totalTimeInSeconds;
 var countdownInterval;
 
-// Add this function at the end of your app.js file
 function startTimer() {
     countdownInterval = setInterval(updateTimer, 1000);
 }
