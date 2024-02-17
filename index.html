@@ -1,39 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Contest</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>JavaScript Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="quiz-container">
-    <h1>Quiz Contest</h1>
-    <form id="quiz-form">
-        <!-- Add your quiz questions and options here -->
-        <div class="question">
-            <p>Question 1: What is the capital of France?</p>
-            <label><input type="radio" name="q1" value="Paris"> Paris</label>
-            <label><input type="radio" name="q1" value="Berlin"> Berlin</label>
-            <label><input type="radio" name="q1" value="London"> London</label>
-        </div>
-
-        <!-- Add more questions as needed -->
-
-        <button type="button" onclick="showResults()">Submit</button>
-    </form>
-
-    <div id="results-container" class="hidden">
-        <h2>Results</h2>
-        <p id="score">Your score: <span id="result">0</span></p>
-        <div id="correct-answers" class="hidden">
-            <h3>Correct Answers</h3>
-            <!-- Display correct answers here -->
-        </div>
-    </div>
-</div>
-
-<script src="script.js"></script>
+  <div class="container">
+    <h1>Quiz App</h1>
+    <div id="quiz"></div>
+    <div id="result" class="result"></div>
+    <button id="submit" class="button">Submit</button>
+    <button id="retry" class="button hide">Retry</button>
+    <button id="showAnswer" class="button hide">Show Answer</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
