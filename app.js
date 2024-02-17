@@ -1,14 +1,6 @@
 /* Created and coded by Amrit Pritam Sangramsingh */
 /* Quiz source: w3schools.com */
 // Add these variables at the beginning of your app.js file
-var totalTimeInSeconds = 300; // Set the total time in seconds (e.g., 5 minutes)
-var timeLeft = totalTimeInSeconds;
-var countdownInterval;
-
-function startTimer() {
-    countdownInterval = setInterval(updateTimer, 1000);
-}
-
 function updateTimer() {
     var minutes = Math.floor(timeLeft / 60);
     var seconds = timeLeft % 60;
@@ -17,15 +9,12 @@ function updateTimer() {
 
     if (timeLeft <= 0) {
         clearInterval(countdownInterval);
-        // Add any logic to handle the end of the quiz when the timer reaches zero
         alert("Time's up! Quiz completed.");
+        // Add any additional logic for the end of the quiz
     } else {
         timeLeft--;
     }
 }
-
-// Call startTimer() function when your quiz starts (you can trigger it based on user actions or page load)
-startTimer();
 
 var quiz = {
 "JS": [
