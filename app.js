@@ -17,8 +17,8 @@ function updateTimer() {
 
     if (timeLeft <= 0) {
         clearInterval(countdownInterval);
-        alert("Time's up! Quiz completed.");
-        // Add any additional logic for the end of the quiz
+        // Auto-submit the form when time is up
+        document.forms["quizForm"].submit();
     } else {
         timeLeft--;
     }
