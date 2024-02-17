@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>MCQ Quiz</title>
+    <title>Quiz Contest</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="quiz-container">
-        <h1>MCQ Quiz</h1>
-        <div id="question-container"></div>
-        <div id="options-container"></div>
-        <button onclick="nextQuestion()">Next</button>
+
+<div class="quiz-container">
+    <h1>Quiz Contest</h1>
+    <form id="quiz-form">
+        <!-- Add your quiz questions and options here -->
+        <div class="question">
+            <p>Question 1: What is the capital of France?</p>
+            <label><input type="radio" name="q1" value="Paris"> Paris</label>
+            <label><input type="radio" name="q1" value="Berlin"> Berlin</label>
+            <label><input type="radio" name="q1" value="London"> London</label>
+        </div>
+
+        <!-- Add more questions as needed -->
+
+        <button type="button" onclick="showResults()">Submit</button>
+    </form>
+
+    <div id="results-container" class="hidden">
+        <h2>Results</h2>
+        <p id="score">Your score: <span id="result">0</span></p>
+        <div id="correct-answers" class="hidden">
+            <h3>Correct Answers</h3>
+            <!-- Display correct answers here -->
+        </div>
     </div>
-    <div id="result-container" style="display: none;">
-        <h1>Quiz Completed!</h1>
-        <div id="answers-container"></div>
-        <p>Your score: <span id="score"></span> out of <span id="total-questions"></span></p>
-        <button onclick="restartQuiz()">Restart Quiz</button>
-    </div>
-    <script src="js/script.js"></script>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
