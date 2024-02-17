@@ -30,366 +30,259 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 var quiz = {
-"JS": [
-{
-"id": 1,
-"question": "Inside which HTML element do we put the JavaScript?",
-"options": [
-{
-"a": "&lt;script&gt;",
-"b": "&lt;javascript&gt;",
-"c": "&lt;scripting&gt;",
-"d": "&lt;js&gt;"
-}
-],
-"answer": "&lt;script&gt;",
-"score": 0,
-"status": ""
-},
-{
-"id": 2,
-"question": "Where is the correct place to insert a JavaScript?",
-"options": [
-{
-"a": "The &lt;head&gt; section",
-"b": "The &lt;body&gt; section",
-"c": "Both the &lt;head&gt; section and the &lt;body&gt; section are correct"
-}
-],
-"answer": "Both the &lt;head&gt; section and the &lt;body&gt; section are correct",
-"score": 0,
-"status": ""
-},
-{
-"id": 3,
-"question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-"options": [
-{
-"a": "&ltscript href=&quot;xxx.js&quot;>",
-"b": "&lt;script name=&quot;xxx.js&quot;&gt;",
-"c": "&lt;script src=&quot;xxx.js&quot;&gt;"
-}
-],
-"answer": "&lt;script src=&quot;xxx.js&quot;&gt;",
-"score": 0,
-"status": ""
-},
-{
-"id": 4,
-"question": "The external JavaScript file must contain the &lt;script&gt; tag.",
-"options": [
-{
-"a": "True",
-"b": "False"
-}
-],
-"answer": "False",
-"score": 0,
-"status": ""
-},
-{
-"id": 5,
-"question": "How do you write &quot;Hello World&quot; in an alert box?",
-"options": [
-{
-"a": "alertBox(&quot;Hello World&quot;);",
-"b": "msg(&quot;Hello World&quot;);",
-"c": "alert(&quot;Hello World&quot;);",
-"d": "msgBox(&quot;Hello World&quot;);",
-}
-],
-"answer": "alert(&quot;Hello World&quot;);",
-"score": 0,
-"status": ""
-},
-{
-"id": 6,
-"question": "How do you create a function in JavaScript?",
-"options": [
-{
-"a": "function myFunction()",
-"b": "function:myFunction()",
-"c": "function = myFunction()",
-}
-],
-"answer": "function myFunction()",
-"score": 0,
-"status": ""
-},
-{
-"id": 7,
-"question": "How do you call a function named &quot;myFunction&quot;?",
-"options": [
-{
-"a": "call function myFunction()",
-"b": "call myFunction()",
-"c": "myFunction()",
-}
-],
-"answer": "myFunction()",
-"score": 0,
-"status": ""
-},
-{
-"id": 8,
-"question": "How to write an IF statement in JavaScript?",
-"options": [
-{
-"a": "if i = 5 then",
-"b": "if i == 5 then",
-"c": "if (i == 5)",
-"d": " if i = 5",
-}
-],
-"answer": "if (i == 5)",
-"score": 0,
-"status": ""
-},
-{
-"id": 9,
-"question": "Which of the following is a disadvantage of using JavaScript?",
-"options": [
-{
-"a": "Client-side JavaScript does not allow the reading or writing of files.",
-"b": "JavaScript can not be used for Networking applications because there is no such support available.",
-"c": "JavaScript doesn't have any multithreading or multiprocess capabilities.",
-"d": "All of the above."
-}
-],
-"answer": "All of the above.",
-"score": 0,
-"status": ""
-},
-{
-"id": 10,
-"question": "How to write an IF statement for executing some code if &quot;i&quot; is NOT equal to 5?",
-"options": [
-{
-"a": "if (i <> 5)",
-"b": "if i <> 5",
-"c": "if (i != 5)",
-"d": "if i =! 5 then",
-}
-],
-"answer": "if (i != 5)",
-"score": 0,
-"status": ""
-},
-{
-"id": 11,
-"question": "How does a WHILE loop start?",
-"options": [
-{
-"a": "while i = 1 to 10",
-"b": "while (i &lt;= 10; i++)",
-"c": "while (i &lt;= 10)"
-}
-],
-"answer": "while (i &lt;= 10)",
-"score": 0,
-"status": ""
-},
-{
-"id": 12,
-"question": "How does a FOR loop start?",
-"options": [
-{
-"a": "for (i = 0; i &lt;= 5)",
-"b": "for (i = 0; i &lt;= 5; i++)",
-"c": "for i = 1 to 5",
-"d": "for (i &lt;= 5; i++)"
-}
-],
-"answer": "for (i = 0; i &lt;= 5; i++)",
-"score": 0,
-"status": ""
-},
-{
-"id": 13,
-"question": "How can you add a comment in a JavaScript?",
-"options": [
-{
-"a": "//This is a comment",
-"b": "&sbquo;This is a comment",
-"c": "&lt;!--This is a comment--&gt;"
-}
-],
-"answer": "//This is a comment",
-"score": 0,
-"status": ""
-},
-{
-"id": 14,
-"question": "How to insert a comment that has more than one line?",
-"options": [
-{
-"a": "/*This comment has more than one line*/",
-"b": "//This comment has more than one line//",
-"c": "&lt;!--This comment has more than one line--&gt;"
-}
-],
-"answer": "/*This comment has more than one line*/",
-"score": 0,
-"status": ""
-},
-{
-"id": 15,
-"question": "What is the correct way to write a JavaScript array?",
-"options": [
-{
-"a": "var colors = (1:&quot;red&quot;, 2:&quot;green&quot;, 3:&quot;blue&quot;)",
-"b": "var colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]",
-"c": "var colors = 1 = (&quot;red&quot;), 2 = (&quot;green&quot;), 3 = (&quot;blue&quot;)",
-"d": "var colors = &quot;red&quot;, &quot;green&quot;, &quot;blue&quot;"
-}
-],
-"answer": "var colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]",
-"score": 0,
-"status": ""
-},
-{
-"id": 16,
-"question": "How do you round the number 7.25, to the nearest integer?",
-"options": [
-{
-"a": "rnd(7.25)",
-"b": "Math.round(7.25)",
-"c": "Math.rnd(7.25)",
-"d": "round(7.25)"
-}
-],
-"answer": "Math.round(7.25)",
-"score": 0,
-"status": ""
-},
-{
-"id": 17,
-"question": "How do you find the number with the highest value of x and y?",
-"options": [
-{
-"a": "Math.max(x, y)",
-"b": "Math.ceil(x, y)",
-"c": "top(x, y)",
-"d": "ceil(x, y)"
-}
-],
-"answer": "Math.max(x, y)",
-"score": 0,
-"status": ""
-},
-{
-"id": 18,
-"question": "What is the correct JavaScript syntax for opening a new window called &quot;w2&quot;?",
-"options": [
-{
-"a": "w2 = window.new(&quot;http://www.w3schools.com&quot;);",
-"b": "w2 = window.open(&quot;http://www.w3schools.com&quot;);"
-}
-],
-"answer": "w2 = window.open(&quot;http://www.w3schools.com&quot;);",
-"score": 0,
-"status": ""
-},
-{
-"id": 19,
-"question": "JavaScript is the same as Java.",
-"options": [
-{
-"a": "true",
-"b": "false"
-}
-],
-"answer": "false",
-"score": 0,
-"status": ""
-},
-{
-"id": 20,
-"question": "How can you detect the client&rsquo;s browser name?",
-"options": [
-{
-"a": "navigator.appName",
-"b": "browser.name",
-"c": "client.navName"
-}
-],
-"answer": "navigator.appName",
-"score": 0,
-"status": ""
-},
-{
-"id": 21,
-"question": "Which event occurs when the user clicks on an HTML element?",
-"options": [
-{
-"a": "onchange",
-"b": "onclick",
-"c": "onmouseclick",
-"d": "onmouseover"
-}
-],
-"answer": "onclick",
-"score": 0,
-"status": ""
-},
-{
-"id": 22,
-"question": "How do you declare a JavaScript variable?",
-"options": [
-{
-"a": "var carName;",
-"b": "variable carName;",
-"c": "v carName;"
-}
-],
-"answer": "var carName;",
-"score": 0,
-"status": ""
-},
-{
-"id": 23,
-"question": "Which operator is used to assign a value to a variable?",
-"options": [
-{
-"a": "*",
-"b": "-",
-"c": "=",
-"d": "x"
-}
-],
-"answer": "=",
-"score": 0,
-"status": ""
-},
-{
-"id": 24,
-"question": "What will the following code return: Boolean(10 &gt; 9)",
-"options": [
-{
-"a": "NaN",
-"b": "false",
-"c": "true"
-}
-],
-"answer": "true",
-"score": 0,
-"status": ""
-},
-{
-"id": 25,
-"question": "Is JavaScript case-sensitive?",
-"options": [
-{
-"a": "No",
-"b": "Yes"
-}
-],
-"answer": "Yes",
-"score": 0,
-"status": ""
-}
-]
-}
+    "Python": [
+      {
+        "id": 1,
+        "question": "What is the maximum length of a Python identifier?",
+        "options": [
+          {"a": "32", "b": "16", "c": "128", "d": "No fixed length"}
+        ],
+        "answer": "No fixed length",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 2,
+        "question": "What will be the output of the following code snippet? print(2**3 + (5 + 6)**(1 + 1));",
+        "options": [
+          {"a": "129", "b": "8", "c": "121", "d": "None of the above"}
+        ],
+        "answer": "129",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 3,
+        "question": "Which of the following is not a valid variable name in Python?",
+        "options": [
+          {"a": "my_variable", "b": "2nd_variable", "c": "variable_3", "d": "totalAmount$"}
+        ],
+        "answer": "2nd_variable",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 4,
+        "question": "What is the purpose of the 'pass' statement in Python?",
+        "options": [
+          {"a": "To create an empty block of code", "b": "To stop the execution of a loop", "c": "To indicate an error", "d": "To print a message to the console"}
+        ],
+        "answer": "To create an empty block of code",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 5,
+        "question": "Which of the following is an immutable data type in Python?",
+        "options": [
+          {"a": "List", "b": "Tuple", "c": "Dictionary", "d": "Set"}
+        ],
+        "answer": "Tuple",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 6,
+        "question": "What is the purpose of the 'super()' function in Python?",
+        "options": [
+          {"a": "To call a method of the parent class", "b": "To create a new instance of a class", "c": "To access a global variable", "d": "To raise an exception"}
+        ],
+        "answer": "To call a method of the parent class",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 7,
+        "question": "How do you open a file named 'example.txt' in read mode in Python?",
+        "options": [
+          {"a": "file('example.txt', 'r')", "b": "open('example.txt', 'read')", "c": "open('example.txt', 'r')", "d": "read('example.txt')"}
+        ],
+        "answer": "open('example.txt', 'r')",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 8,
+        "question": "What is the output of the following code snippet? print('Hello' + 3)",
+        "options": [
+          {"a": "TypeError", "b": "Hello3", "c": "HelloHelloHello", "d": "Hello 3"}
+        ],
+        "answer": "TypeError",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 9,
+        "question": "What is the purpose of the 'break' statement in Python?",
+        "options": [
+          {"a": "To exit the current loop prematurely", "b": "To skip the current iteration of a loop", "c": "To continue to the next iteration of a loop", "d": "To stop the execution of the program"}
+        ],
+        "answer": "To exit the current loop prematurely",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 10,
+        "question": "How can you check the length of a list named 'myList' in Python?",
+        "options": [
+          {"a": "len(myList)", "b": "myList.length()", "c": "length(myList)", "d": "count(myList)"}
+        ],
+        "answer": "len(myList)",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 11,
+        "question": "What is the difference between '==' and 'is' in Python?",
+        "options": [
+          {"a": "'==' is used for value equality, 'is' is used for reference equality", "b": "'==' is used for reference equality, 'is' is used for value equality", "c": "'==' and 'is' are interchangeable", "d": "There is no difference between '==' and 'is'"}
+        ],
+        "answer": "'==' is used for value equality, 'is' is used for reference equality",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 12,
+        "question": "What is the purpose of the 'finally' block in a try-except-finally statement?",
+        "options": [
+          {"a": "To handle exceptions", "b": "To define the main logic of the code", "c": "To ensure that code in the block always runs, whether there is an exception or not", "d": "To terminate the program"}
+        ],
+        "answer": "To ensure that code in the block always runs, whether there is an exception or not",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 13,
+        "question": "What will be the output of the following code snippet? print(9 / 2)",
+        "options": [
+          {"a": "4.5", "b": "4", "c": "5.0", "d": "5"}
+        ],
+        "answer": "4.5",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 14,
+        "question": "Which of the following statements is used to define a function in Python?",
+        "options": [
+          {"a": "def function_name():", "b": "function function_name():", "c": "function_name def():", "d": "define function_name():"}
+        ],
+        "answer": "def function_name():",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 15,
+        "question": "What is the purpose of the 'lambda' keyword in Python?",
+        "options": [
+          {"a": "To define a multiline function", "b": "To create an anonymous function", "c": "To declare a global variable", "d": "To import a module"}
+        ],
+        "answer": "To create an anonymous function",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 16,
+        "question": "How can you convert a string '123' to an integer in Python?",
+        "options": [
+          {"a": "int('123')", "b": "str(123)", "c": "float('123')", "d": "parse('123')"}
+        ],
+        "answer": "int('123')",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 17,
+        "question": "What is the purpose of the '__init__' method in Python?",
+        "options": [
+          {"a": "To initialize the class variables", "b": "To define the main logic of the class", "c": "To create an instance of the class", "d": "To terminate the program"}
+        ],
+        "answer": "To initialize the class variables",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 18,
+        "question": "Which of the following is a valid way to comment out multiple lines of code in Python?",
+        "options": [
+          {"a": "# This is a comment", "b": "// This is a comment", "c": "/* This is a comment */", "d": "''' This is a comment '''"}
+        ],
+        "answer": "''' This is a comment '''",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 19,
+        "question": "What does the 'range()' function in Python return?",
+        "options": [
+          {"a": "A list of numbers", "b": "A range object", "c": "A tuple of numbers", "d": "A set of numbers"}
+        ],
+        "answer": "A range object",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 20,
+        "question": "Which of the following is true about Python's Global Interpreter Lock (GIL)?",
+        "options": [
+          {"a": "It allows multiple threads to execute in parallel", "b": "It prevents multiple threads from executing in parallel", "c": "It is only applicable to multi-core processors", "d": "It is used for memory management"}
+        ],
+        "answer": "It prevents multiple threads from executing in parallel",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 21,
+        "question": "What is the purpose of the 'zip()' function in Python?",
+        "options": [
+          {"a": "To compress files", "b": "To zip two lists together", "c": "To create a zip file", "d": "To unzip files"}
+        ],
+        "answer": "To zip two lists together",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 22,
+        "question": "How do you check if a key is present in a dictionary named 'my_dict' in Python?",
+        "options": [
+          {"a": "'key' in my_dict", "b": "my_dict.exists('key')", "c": "my_dict.hasKey('key')", "d": "exists('key') in my_dict"}
+        ],
+        "answer": "'key' in my_dict",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 23,
+        "question": "What is the purpose of the 'map()' function in Python?",
+        "options": [
+          {"a": "To apply a function to all elements of a list", "b": "To create a map object", "c": "To map keys to values in a dictionary", "d": "To search for a pattern in a string"}
+        ],
+        "answer": "To apply a function to all elements of a list",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 24,
+        "question": "What is the output of the following code snippet? console.log('Hello' + String(3));",
+        "options": [
+          {"a": "Hello3", "b": "TypeError", "c": "Hello4", "d": "Hello"}
+        ],
+        "answer": "Hello3",
+        "score": 0,
+        "status": ""
+      },
+      {
+        "id": 25,
+        "question": "Which of the following is a correct way to create an empty set in Python?",
+        "options": [
+          {"a": "{}", "b": "set()", "c": "set({})", "d": "emptySet()"}
+        ],
+        "answer": "set()",
+        "score": 0,
+        "status": ""
+      }
+    ]
+  }  
 var quizApp = function () {
 this.score = 0;
 this.qno = 1;
